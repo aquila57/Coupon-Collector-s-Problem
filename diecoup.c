@@ -176,7 +176,7 @@ int main(int argc, char **argv)
    /* about the distribution of the coupon collector's problem.      */
    /******************************************************************/
    printf("\t    Coupon Collector's Test\n");
-   printf("\tDieharder Generator: %s\n",
+   printf("\t   Dieharder Generator: %s\n",
       xx->dieharder_rngname);
    printf("\n");
    calcchi(tally, n, maxlen, SIZE/20);

@@ -131,7 +131,7 @@ int main(int argc, char **argv)
    /* about the distribution of the coupon collector's problem.      */
    /******************************************************************/
    printf("\t    Coupon Collector's Test\n");
-   printf("\t\teegl64 Generator\n");
+   printf("\t\tetaus Generator\n");
    printf("\n");
    calcchi(tally, n, maxlen, SIZE);
    /******************************************************************/
