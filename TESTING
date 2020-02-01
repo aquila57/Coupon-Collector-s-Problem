@@ -1,0 +1,208 @@
+Testing instructions for all the coupon collector's programs
+in this repository.
+
+Read REFERENCES for information about the coupon collector's
+problem.
+
+Each program in this repository reads one parameter, which
+is the number of coupons in the test.
+
+--------
+
+Program by program testing instructions.
+
+Fibonacci random number generator
+
+Run fibocoup to apply the coupon collector's test to the fibonacci
+random number generator.  There is one parameter.
+
+./fibocoup n
+
+Where n is the number of coupons.
+
+Example:
+
+./fibocoup 5
+
+The expected result from this program is a failing P-value
+of 1.0.
+
+--------
+
+64 bit LFSR random number generator
+
+Run lfsrcoup to apply the coupon collector's test to the 64 bit
+LFSR random number generator.  There is one parameter.
+
+./lfsr n
+
+Where n is the number of coupons.
+
+Example:
+
+./lfsrcoup 5
+
+The expected result from this program is a failing P-value
+of 1.0.
+
+--------
+
+32 bit RANDU random number generator
+
+Run randu to apply the coupon collector's test to the 32 bit
+RANDU random number generator.  There is one parameter.
+
+./rucoupon n
+
+Where n is the number of coupons.
+
+Example:
+
+./rucoupon 5
+
+The expected result from this program is a passing P-value
+some of the time.  Because RANDU is a weak random number
+generator, the program fails more often than expected.
+
+--------
+
+eegl64 random number generator
+
+Run coupon to apply the coupon collector's test to the eegl64
+uniform random number generator.  There is one parameter.
+
+./coupon n
+
+Where n is the number of coupons.
+
+Example:
+
+./coupon 5
+
+This test is expected to pass the chi square test.
+
+--------
+
+etaus random number generator
+
+Run etauscoup to apply the coupon collector's test to the etaus
+uniform random number generator.  There is one parameter.
+
+./etauscoup n
+
+Where n is the number of coupons.
+
+Example:
+
+./etauscoup 5
+
+This test is expected to pass the chi square test.
+
+--------
+
+GNU Scientific Library random number generators
+
+Run tstgsl.sh to apply the coupon collector's test to the GNU
+Scientific Library collection of random number generators.
+There are two parameters, the number of coupons and the name
+of the GSL generator.
+
+./tstgsl.sh n RNG_name 
+
+Example,
+
+./tstgsl.sh 5 taus2
+
+This example runs the coupon collector's test on the GSL taus2
+random number generator.
+
+To find a list of valid GSL random number generators, enter
+a parameter that produces an error.
+
+./tstgsl.sh 5 ?
+
+This test is expected to pass the chi square test for most of
+the generators.
+
+To run a test of all GSL generators, run runall.sh.
+
+./runall.sh n
+
+Where n is the number of coupons.
+
+Example:
+
+./runall.sh 5
+
+Read the results of this test by browsing allgsl.out.
+This test reads allgsl.lst as an input file.
+
+--------
+
+Dieharder package random number generators
+
+Run tstdie.sh to apply the coupon collector's test to the
+dieharder collection of random number generators.  There are
+two parameters, the number of coupons and the id of the
+dieharder generator.
+
+./tstdie.sh n RNG_number
+
+Example,
+
+./dietmplt.sh 5 053
+
+This example runs the coupon collector's test on the dieharder
+taus2 random number generator.
+
+To find a list of valid dieharder random number generators,
+enter the following dieharder command.
+
+dieharder -g -l
+
+This test is expected to pass the chi square test for most
+of the random number generators.
+
+To run a test of all dieharder generators, run dieall.sh.
+
+./dieall.sh n
+
+Where n is the number of coupons.
+
+Example:
+
+./dieall.sh 5
+
+Read the results of this test by browsing alldie.out.
+This test reads alldie.lst as an input file.
+
+--------
+
+Binary Coupon Collector's Test
+
+Run bitcoup to run the coupon collector's test with binary
+data.  This test is only run with the eegl64 random number
+generator.
+
+./bitcoup n
+
+Where n is the number of coupons.
+
+Example:
+
+./bitcoup 5
+
+This test is expected to pass the chi square test.
+
+--------
+
+Submit more coupon collector's tests.
+
+If you have a random number generator not included in this
+repository, you are welcome to add more coupon collector's
+test programs to this repository.
+
+--------
+
+Read REFERFENCES for information about the coupon collector's
+problem.  Read INSTALL for installing this repository.
