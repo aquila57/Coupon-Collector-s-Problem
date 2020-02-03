@@ -34,7 +34,7 @@ of 1.0.
 Run lfsrcoup to apply the coupon collector's test to the 64 bit
 LFSR random number generator.  There is one parameter.
 
-./lfsr n
+./lfsrcoup n
 
 Where n is the number of coupons.
 
@@ -63,6 +63,24 @@ Example:
 The expected result from this program is a passing P-value
 some of the time.  Because RANDU is a weak random number
 generator, the program fails more often than expected.
+
+--------
+
+Sine wave random number generator
+
+Run sinecoup to apply the coupon collector's test to the sine
+wave random number generator.  There is one parameter.
+
+./sinecoup n
+
+Where n is the number of coupons.
+
+Example:
+
+./sinecoup 5
+
+The expected result from this program is a failing P-value
+of 1.0.
 
 --------
 
@@ -150,7 +168,7 @@ dieharder generator.
 
 Example,
 
-./dietmplt.sh 5 053
+./tstdie.sh 5 053
 
 This example runs the coupon collector's test on the dieharder
 taus2 random number generator.
